@@ -7,5 +7,56 @@
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <script src="js/script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1>TIC <span class="tac">TAC</span> <span class="toe">TOE</span></h1>
+      <div class="scores">
+        <div class="scores-card">
+          <div class="card-title">X WINS</div>
+          <div class="card-body" id="playerXWins">0</div>
+        </div>
+        <div class="scores-card">
+          <div class="card-title">TIES</div>
+          <div class="card-body" id="ties">0</div>
+        </div>
+        <div class="scores-card">
+          <div class="card-title">O WINS</div>
+          <div class="card-body" id="playerOWins">0</div>
+        </div>
+      </div>
+      <div>
+        <span id="currentTurnPlayer" class="playerX">X's</span>
+        <span id="restOfTurnDisplay">turn</span>
+      </div>
+      <div class="grid" id="grid">
+        <div class="square">O</div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </div>
+      <div class="btn-group">
+        <button id="newRoundBtn">New Round</button>
+        <button id="newGameBtn">New Game</button>
+      </div>
+    </div>
+    <dialog id="nameGetterModal">
+      <h1>Enter your names</h1>
+      <form>
+        <div>
+          <label for="playerXName">Player <span class="playerX">X</span></label>
+          <input type="text" maxlength="20" id="playerXName" placeholder="e.g. Matheus">
+        </div>
+        <div>
+          <label for="playerOName">Player <span class="playerO">O</span>:</label>
+          <input type="text" maxlength="20" id="playerOName" placeholder="e.g. Brooklyn">
+        </div>
+        <button type="button" id="submitNamesBtn">Start</button>
+      </form>
+    </dialog>
+  </body>
 </html>
